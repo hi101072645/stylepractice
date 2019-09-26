@@ -27,7 +27,7 @@ div{
 	color: white;
 	padding: 20px 40px;
 	text-transform: uppercase;
-	transition: all 0.1s ease-out;
+	//transition: all 0.1s ease-out;
 
 	&:hover {
 		background-color: $action-color;
@@ -66,7 +66,7 @@ div{
 
 			.effect-button {
 				position: absolute;
-				width: 50%;
+				width: 42%;
 				height: 25%;
 				top: 50%;
 				left: 25%;
@@ -88,7 +88,7 @@ div{
 	left: -50%;
 	-webkit-filter: url("#goo");
 	filter: url("#goo");
-	transition: all 0.1s ease-out;
+	//transition: all 0.1s ease-out;
 	pointer-events: none;
 
 	.circle {
