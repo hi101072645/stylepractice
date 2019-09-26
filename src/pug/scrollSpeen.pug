@@ -1,0 +1,62 @@
+doctype html
+html(lang='zh-tw')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    meta(name='keyword', content='')
+    link(rel='icon', type='image/png', href='favicon.png')
+    title 捲動不同高
+    link(rel='stylesheet', href='../css/style.css')
+    style.
+      .test {
+        width: 100px;
+        height: 120px;
+        background-color: #adb5bd;
+      }
+
+  body
+    div(style='min-height: 2000px; padding-top:300px')
+      #test3.athNumber.test(style='background-color: #85ffa6; margin-left: 480px;')
+        | gree
+      #test2.athNumber.test(style='background-color: #FD90ff; margin-left: 680px;')
+        | 123
+      #test4.athNumber.test(style='background-color: #67b3ff; margin-left: 280px;')
+        | blue 10
+      .athNumber.test
+        | 123
+      #test5.athNumber.test(style='background-color: #b6ff18; margin-left: 380px;')
+        | 123
+      #test.athNumber.test(style='background-color: #FD9A00; margin-left: 80px;')
+        | 123
+      .athNumber.test
+        | 123
+      #show-test
+    script.
+      let test = document.getElementById('test');
+      let test2 = document.getElementById('test2');
+      let test3 = document.getElementById('test3');
+      let test4 = document.getElementById('test4');
+      let test5 = document.getElementById('test5');
+      let showTest = document.getElementById('show-test');
+      let bodyTop = 0;
+      window.addEventListener('scroll', function () {
+        bodyTop = window.pageYOffset;
+        scroll(test, 5);
+        scroll(test2, 2);
+        scroll(test3, 4);
+        scroll(test4, 10);
+        scroll(test5, 1);
+      });
+      function scroll(dom, speed) {
+        speed = speed * (-1.1);
+        let transY = 'translateY(' + parseInt(bodyTop, 10) * speed / 10 + 'px)';
+        dom.style.transform = transY;}
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js')
