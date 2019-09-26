@@ -45,8 +45,8 @@ gulp.task('default', ['sass'], function () {
 		server: {
 			//根目錄不變與node同層
 			baseDir: "src/",
-			// index: "visual/index2.html" 因為會影響到連結結構 除非html主頁抓至source下第一層
-			//請手動在3000port後輸入visual/index2.html
+			// index: "visual/index.html" 因為會影響到連結結構 除非html主頁抓至source下第一層
+			//請手動在3000port後輸入visual/index.html
 		}
 	});
 

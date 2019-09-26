@@ -13,7 +13,25 @@ html(lang='zh-tw')
     link(rel='stylesheet', href='../css/base/fontawesome-5.9.0/css/all.css')
     link(rel='stylesheet', href='../css/style.css')
   body
-    p.happy test
+    div
+      svg.goo(xmlns='http://www.w3.org/2000/svg', version='1.1')
+        defs
+          filter#goo
+            fegaussianblur(in='SourceGraphic', stdDeviation='10', result='blur')
+            fecolormatrix(in='blur', mode='matrix', values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9', result='goo')
+            fecomposite(in='SourceGraphic', in2='goo')
+      span.button--bubble__container
+        a.button.button--bubble(href='#campaign')
+          | Hover me
+        span.button--bubble__effect-container
+          span.circle.top-left
+          span.circle.top-left
+          span.circle.top-left
+          span.button.effect-button
+          span.circle.bottom-right
+          span.circle.bottom-right
+          span.circle.bottom-right
+
     // jquery
     script(src='js/base/jquery/jquery.min-1.12.4.js')
     // bootstrap
