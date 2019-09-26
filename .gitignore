@@ -1,0 +1,5 @@
+# 忽略開發的時候自動運作的魔法檔案們
+node_modules/
+.idea/
+package-lock.json
+*.css

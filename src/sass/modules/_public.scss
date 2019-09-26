@@ -1,0 +1,201 @@
+//===========而外添加位置屬性==============
+//display
+.d-lineblock {
+	display: inline-block !important;
+}
+
+.d-block {
+	display: block;
+}
+
+@media(min-width: 768px) {
+	.d-sm-lb {
+		display: inline-block !important;
+	}
+}
+
+//position
+.p-relative {
+	position: relative;
+}
+
+.f-r {
+	float: right;
+}
+
+.f-l {
+	float: left;
+}
+
+//margin
+.mr--10 {
+	margin-right: -10px;
+}
+
+//text
+.text-c {
+	text-align: center;
+}
+
+.text-r {
+	text-align: right;
+}
+
+.vr-m {
+	vertical-align: middle;
+}
+
+.vr-t {
+	vertical-align: top;
+}
+
+.vr-b {
+	vertical-align: bottom !important;
+}
+
+.x-break {
+	white-space: nowrap;
+}
+
+//width
+.w-100 {
+	width: 100% !important;
+}
+
+.fw-b {
+	font-weight: bold;
+}
+
+.lis-n {
+	list-style: none;
+}
+
+@media(max-width: 991px) {
+	.d-mdx-none {
+		display: none !important;
+	}
+;
+	.w-mdx-100 {
+		width: 100% !important;
+	}
+	.mt-mdx-20 {
+		margin-top: 20px !important;
+	}
+	.mb-mdx-10 {
+		margin-bottom: 10px !important;
+	}
+	.mt-mdx-40 {
+		margin-top: 40px !important;
+	}
+}
+
+@media(min-width: 992px) {
+	.pl-md-0 {
+		padding-left: 0;
+	}
+;
+	.d-md-none {
+		display: none;
+	}
+}
+
+@media(max-width: 1439px) {
+	.ml-lgx-10p {
+		margin-left: 10%;
+	}
+;
+	.mt-lgx-0 {
+		margin-top: 0px !important;
+	}
+}
+
+//===========新增額外斷點==============
+@media(min-width: 1439px) {
+	.col-xl-12 {
+		float: left;
+	}
+	.col-xl-12 {
+		width: 100%;
+	}
+	.col-xl-11 {
+		width: 91.66666667%;
+	}
+	.col-xl-10 {
+		width: 83.33333333%;
+	}
+	.col-xl-9 {
+		width: 75%;
+	}
+	.col-xl-8 {
+		width: 66.66666667%;
+	}
+	.col-xl-7 {
+		width: 58.33333333%;
+	}
+	.col-xl-6 {
+		width: 50%;
+	}
+	.col-xl-5 {
+		width: 41.66666667%;
+	}
+	.col-xl-4 {
+		width: 33.33333333%;
+	}
+	.col-xl-3 {
+		width: 25%;
+	}
+	.col-xl-2 {
+		width: 16.66666667%;
+	}
+	.col-xl-1 {
+		width: 8.33333333%;
+	}
+}
+
+//===========樣式==============
+.athLine {
+	border-top: 1px solid $line-gray;
+}
+
+body{
+	color: $font-color;
+	line-height: $line-height;
+	font-family: $font-family;
+	text-align: justify;
+	text-justify:inter-ideograph;
+}
+
+@media(max-width: 991px) {
+	body {
+		//overflow-y: overlay;
+		//chrome專用
+	}
+}
+
+h1, .h1 {
+	font-size: $font-size*1.5;
+}
+
+h2, .h2 {
+	font-size: $font-size*1.25;
+}
+
+h3, .h3 {
+	font-size: $font-size*1.125;
+}
+
+h4, .h4 {
+	font-size: $font-size*1.0625;
+}
+
+h5, .h5, .p {
+	font-size: $font-size*1;
+}
+
+h6, .h6 {
+	font-size: $font-size*0.875;
+}
+
+a {
+	color: $font-color;
+}
