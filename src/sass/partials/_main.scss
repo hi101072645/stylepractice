@@ -1,0 +1,6 @@
+.box-1 {
+	@include mboxshadow(1);
+	&:hover {
+		@include mboxshadow(2);
+	}
+}
