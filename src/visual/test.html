@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			font-family: '微軟正黑體';
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-color: #f3f3f3;
+		}
+
+		#app {
+			width: 1200px;
+			margin-right: auto;
+			margin-left: auto;
+			background-color: #fff;
+			padding: 200px 0;
+		}
+
+		.card {
+			width: 400px;
+			height: 250px;
+			background-color: #efefef;
+			box-sizing: border-box;
+			padding: 30px;
+			border-radius: 5px;
+			margin: 20px;
+			box-shadow: 2px 2px 6px rgba(0, 0, 0, .15);
+			position: relative;
+			display: inline-block;
+		}
+
+		.card_state {
+			position: absolute;
+			bottom: 20px;
+			right: 30px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #ccc;
+		}
+
+		.is_active {
+			background-color: #fff;
+		}
+
+		.is_active .card_state {
+			background-color: red;
+		}
+
+		.card_img {
+			width: 60px;
+			height: 60px;
+			border-radius: 30px;
+			overflow: hidden;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.card_name {
+			line-height: 60px;
+			font-size: 30px;
+			vertical-align: middle;
+			margin-left: 20px;
+		}
+
+		.card_img img {
+			width: 100%;
+		}
+
+		.card ul {
+			padding: 0 30px;
+		}
+
+		.hr {
+			width: 100px;
+			border-bottom: 1px solid #dedede;
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+
+<body>
+<div id="app">
+	<div v-for='user in users' class="card" :class="{'is_active': user.isActive }">
+		<div class="card_state"></div>
+		<div class="card_img">
+			<img v-bind:src="user.picture" alt="">
+		</div>
+		<span class=" card_name">{{user.name.first}} {{user.name.last}}</span>
+		<span class="card_age">{{user.age}}</span>
+
+		<div class="hr"></div>
+		<ul>
+			<li v-for='friend in user.friends'>{{friend.name}}</li>
+		</ul>
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+	const vm = new Vue({
+		el: ' #app',
+		data: {
+			users: []
+		},
+		mounted() {
+			fetch('./test.json').then(res => res.json()).then(users =>
+				this.users = users)
+		}
+	})
+</script>
+</body>
+
+</html>
